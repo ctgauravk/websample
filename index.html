@@ -1,0 +1,328 @@
+
+<html>
+	<head>
+ 		<link rel="manifest" href="manifest.json">
+		<!-- <link rel="banner" href="banner_pop_up.json"> -->
+
+		<script>
+			! function() {
+				var analytics = window.analytics = window.analytics || [];
+				if (!analytics.initialize)
+					if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+					else {
+						analytics.invoked = !0;
+						analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"];
+						analytics.factory = function(e) {
+							return function() {
+								var t = Array.prototype.slice.call(arguments);
+								t.unshift(e);
+								analytics.push(t);
+								return analytics
+							}
+						};
+						for (var e = 0; e < analytics.methods.length; e++) {
+							var key = analytics.methods[e];
+							analytics[key] = analytics.factory(key)
+						}
+						analytics.load = function(key, e) {
+							var t = document.createElement("script");
+							t.type = "text/javascript";
+							t.async = !0;
+							t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+							var n = document.getElementsByTagName("script")[0];
+							n.parentNode.insertBefore(t, n);
+							analytics._loadOptions = e
+						};
+						analytics._writeKey = "G9YqiBADs6ASf2n9W6zuSaKavdDPD9rK";
+						analytics.SNIPPET_VERSION = "4.15.2";
+						analytics.load("G9YqiBADs6ASf2n9W6zuSaKavdDPD9rK");
+						analytics.page();
+					}
+			}(); 
+		</script>
+		<!-- ct integration code -->
+		<!-- <script type="text/javascript">
+
+			  var clevertap = {event:[], profile:[], region:'eu1',account:[], onUserLogin:[], notifications:[], privacy:[]};
+			// replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+			// clevertap.account.push({"id": "TEST-Z86-999-656Z"});
+			
+			// clevertap.init('ACCOUNT_ID', 'eu1') // Replace with values applicable to you
+			// clevertap.setLogLevel(3)
+			clevertap.account.push({"id": "6ZR-965-446Z"})
+			clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+			clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agrees to share their IP data
+			 (function () {
+					 var wzrk = document.createElement('script');
+					 wzrk.type = 'text/javascript';
+					 wzrk.async = true;
+					 wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
+					 var s = document.getElementsByTagName('script')[0];
+					 s.parentNode.insertBefore(wzrk, s);
+			  })();
+			// clevertap.onUserLogin.push({
+			//  "Site": {
+			//    "Name": "Gaurav", // String
+			//    //"Identity": 630216032,  // String or number
+			//    "Email": "gs135@gmail.com", // Email address of the user
+			// //    "Phone": "+916574839201",  // Phone (with the country code)
+			//    "Gender": "M", // Can be either M or F
+			//    "Highest Education" : "Masters",
+			//    "Qualification" : 12,
+			//    "DOB": new Date(), // Date of Birth. Date object
+
+			// // optional fields. controls whether the user will be sent email, push etc.
+			//    "MSG-email": true, // Disable email notifications
+			//    "MSG-push": true,   // Enable push notifications
+			// //    "MSG-sms": true,    // Enable sms notifications
+			//    "MSG-whatsapp": true, // Enable WhatsApp notifications
+			//  }
+			// });
+			
+
+			//Event without event properties
+			// clevertap.event.push("Index Viewed");
+
+			//Event with event properties
+			// clevertap.event.push("Product Viewed", {
+			//   "Product name":"Casio Chronograph Watch",
+			//   "Category":"Mens Accessories",
+			//   "Price":59.99,  //Price should have a numeric datatype (int, float, etc)
+			// });
+			
+			/*clevertap.notificationCallback = function(msg){
+				//raise the notification viewed and clicked events in the callback
+				clevertap.raiseNotificationViewed();
+				console.log(JSON.stringify(msg));            //your custom rendering implementation here
+				var $button = jQuery("<button>hi</button>");   //element on whose click you want to raise the notification clicked event
+				$button.click(function(){
+					clevertap.raiseNotificationClicked();
+				});
+			};*/
+
+			clevertap.setLogLevel(3)
+		</script> -->
+
+	</head>
+	<body>
+		<h1><center>Index - Web Push</center></h1>
+
+		<button id="btn">logout here</button>
+		<button id="login">login</button>
+		<button id="eventpush">event here</button>
+		<button id="mainlogin">main login here</button>
+
+		<button id="thirdlogin">Third login here</button>
+
+		<script>
+			/*var btn = document.querySelector('.btn');
+			//var wrapper = window.parent.document.getElementById('wizParDiv0');
+			btn.addEventListener('click', pushEvent);
+			function pushEvent()
+			{ clevertap.event.push("Button Clicked"); }*/
+
+			document.getElementById("eventpush").addEventListener("click", function() {
+ 				// clevertap.event.push("product view");
+				var date1 = Date.now()
+
+				analytics.track('Signed Up', {
+					plan: 'Enterprise',
+					sign_up_date:'$D_1696148937',
+				});
+
+			// 	clevertap.event.push("Screen View", {
+			// 		"date_type1":date1,
+			// 		"date2":new Date(),
+  			// 	 "l_number" : "6270012000001467594",
+            // 	"Customer Id" : "M350001",
+            // 	"phone" : "+96508220026",
+           	// 	"Name" : "ghh ftyhj"				
+			// });
+
+				// clevertap.event.push(
+                //             "lead_filled",{
+                             
+                //                 'language': this.state.selectedLanguage,
+                //                 'mobile_number': this.state.values.mobileNo,
+                //                 'referral_code': this.state.values.referralCode,
+                //                 'south_indian_language': this.state.values.isSouthIndian ? "yes" : "no",
+                //                 'ekycuserid': response.data.Data.UserId,
+                //                 'lsqid': response.data.Data.LSQLeadId,
+                            
+                //         });
+			});
+
+			document.getElementById("btn").addEventListener("click", function() {
+				clevertap.clear();
+				clevertap.event.push("Product");
+				clevertap.notifications.push({
+					"titleText":'Would you like to receive Push Notifications?',
+					"bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+					"okButtonText":'Sign me up!',
+					"rejectButtonText":'No thanks',
+					"okButtonColor":'#f28046',
+					"serviceWorkerPath": "./assets/clevertap_sw.js"
+				});
+				// addMultiValuesForKey('stuff', ['cap', 'belt'])
+				// clevertap.profile.push({
+				// 	"Site": {
+				// 		'stuff': ['wallet']
+				// 	}
+				// })
+
+				// clevertap.addMultiValueForKey('stuff', 'bag')
+				clevertap.removeMultiValueForKey('stuff','wallet')
+			});
+			document.getElementById("login").addEventListener("click", function() {
+
+				analytics.identify('123456y7ui', {
+					name: 'Michael Brown',
+					email: 'emmanuel@example.com'
+				});
+				// clevertap.event.push("Button Clicked");
+			// 	clevertap.onUserLogin.push({
+			//  "Site": {
+			//    "Name": "Butler", // String
+			// //    "Identity": +916574839201,  // String or number
+			//    "Email": "gs12@gmail.com", // Email address of the user
+			// //    "Phone": "+916574839201",  // Phone (with the country code)
+			//    "Gender": "M", // Can be either M or F
+			//    "Highest Education" : "Masters",
+			//    "Qualification" : 12,
+			//    "DOB": new Date(), // Date of Birth. Date object
+
+			// // optional fields. controls whether the user will be sent email, push etc.
+			//    "MSG-email": true, // Disable email notifications
+			//    "MSG-push": true,   // Enable push notifications
+			// //    "MSG-sms": true,    // Enable sms notifications
+			//    "MSG-whatsapp": true, // Enable WhatsApp notifications
+			//  }
+			// });
+		});	
+			document.getElementById("mainlogin").addEventListener("click", function() {
+
+				window.analytics.ready(() => {
+					clevertap.profile.push({
+						"Site": {
+							"Name": "Gaurav"
+						}
+					});
+				});
+
+				// clevertap.event.push("Button Clicked");
+			// 	clevertap.profile.push({
+			//  "Site": {
+			//    "Name": "Gaurav", // String
+			// //    "Identity": +916574839200,  // String or number
+			//    "Email": "gs123@gmail.com", // Email address of the user
+			// //    "Phone": "+916574839200",  // Phone (with the country code)
+			//    "Gender": "M", // Can be either M or F
+			//    "Highest Education" : "Masters",
+			//    "Qualification" : 12,
+			//    "DOB": new Date(), // Date of Birth. Date object
+
+			// // optional fields. controls whether the user will be sent email, push etc.
+			//    "MSG-email": true, // Disable email notifications
+			//    "MSG-push": true,   // Enable push notifications
+			// //    "MSG-sms": true,    // Enable sms notifications
+			//    "MSG-whatsapp": true, // Enable WhatsApp notifications
+			//  }
+			// });
+		});	
+			document.getElementById("thirdlogin").addEventListener("click", function() {
+				// clevertap.event.push("Button Clicked");
+				clevertap.onUserLogin.push({
+			 "Site": {
+			   "Name": "Root", // String
+			//    "Identity": +916574839203,  // String or number
+			   "Email": "gs12345@gmail.com", // Email address of the user
+			//    "Phone": "+916574839203",  // Phone (with the country code)
+			   "Gender": "M", // Can be either M or F
+			   "Highest Education" : "Masters",
+			   "Qualification" : 12,
+			   "DOB": new Date(), // Date of Birth. Date object
+			   "ct_is_test_user":true,
+			// optional fields. controls whether the user will be sent email, push etc.
+			   "MSG-email": true, // Disable email notifications
+			   "MSG-push": true,   // Enable push notifications
+			//    "MSG-sms": true,    // Enable sms notifications
+			   "MSG-whatsapp": true, // Enable WhatsApp notifications
+			 }
+			});		
+		});
+			
+		</script>
+
+		
+		<script>
+		/*
+		var btn = document.querySelector('.btn');
+		var wrapper = window.parent.document.getElementById('wizParDiv0');
+		btn.addEventListener('click', closePopUp);
+		function closePopUp()
+		{ wrapper.remove(); }
+		*/
+// 	if ('serviceWorker' in navigator) {
+//       window.addEventListener('load', () => {
+//           navigator.serviceWorker.register('/assets/clevertap_sw.js')
+//               .then(reg => {
+//                   console.log('Registration succeeded. Scope is ' + reg.scope);
+                    
+//               })
+//               .catch(registrationError => {
+//                   console.log('SW registration failed: ', registrationError);
+//               });
+//       });
+//   }
+		</script>
+
+		<!-- <script src="/assets/clevertap_sw.js"></script>
+
+		<script src="/assets/notification_prompt.js"></script> 
+		 -->
+
+		 <script>
+			window.analytics.ready(() => {
+					 clevertap.notifications.push({
+					  "titleText":'Would you like to receive Push Notifications?',
+					  "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+					  "okButtonText":'Yes',
+					  "rejectButtonText":'No thanks',
+					  "okButtonColor":'#15F7A9',
+					 "serviceWorkerPath": "./assets/clevertap_sw.js"
+					 });
+			
+					isLoaded: () => true
+				  
+			})   
+			
+			</script>
+	</body>
+
+	<!-- cordova plugin add https://github.com/CleverTap/clevertap-cordova.git --variable CLEVERTAP_ACCOUNT_ID="6ZR-965-446Z" --variable CLEVERTAP_TOKEN="56c-216"
+ -->
+</html>
+
+
+
+<!-- // /**
+//  * Import function triggers from their respective submodules:
+//  *
+//  * const {onCall} = require("firebase-functions/v2/https");
+//  * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
+//  *
+//  * See a full list of supported triggers at https://firebase.google.com/docs/functions
+//  */
+
+// const {onRequest} = require("firebase-functions/v2/https");
+// const logger = require("firebase-functions/logger");
+
+// // Create and deploy your first functions
+// // https://firebase.google.com/docs/functions/get-started
+
+// // exports.helloWorld = onRequest((request, response) => {
+// //   logger.info("Hello logs!", {structuredData: true});
+// //   response.send("Hello from Firebase!");
+// // }); -->
+
+

@@ -1,0 +1,153 @@
+{
+  "d": [
+    {
+      "evtData": {
+        "amount": 22.73,
+        "currency": "ngn",
+        "status": "successful"
+      },
+      "evtName": "wallet_withdrawal",
+      "identity": "a6f51bba-ebd4-4d82-b567-fc51e732a2a3",
+      "ts": 1693905927,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "currency": "ngn",
+        "brand": "mastercard",
+        "expiry_date": "04/26"
+      },
+      "evtName": "complete_add_card",
+      "identity": "95e740ab-799e-40a6-adef-72f8f76c5fb2",
+      "ts": 1693906050,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "funding_source": "card",
+        "amount": 0.11,
+        "currency": "ngn",
+        "platform": "mobile",
+        "platform_os": "android",
+        "appsflyer_device_id": "1693882883972-2356431000715084277"
+      },
+      "evtName": "fund_wallet",
+       "identity": "95e740ab-799e-40a6-adef-72f8f76c5fb2",
+      "ts": 1693906051,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "amount": 11.36,
+        "currency": "ngn",
+        "status": "successful"
+      },
+      "evtName": "wallet_withdrawal",
+       "identity": "628751f4-743b-430d-b64b-004adec8ee45",
+      "ts": 1693906066,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "amount": 230,
+        "currency": "ngn",
+        "status": "successful"
+      },
+      "evtName": "wallet_withdrawal",
+      "identity": "65220ed8-99e4-4d96-a043-95c93cfd4c09",
+      "ts": 1693906080,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "amount": 1.09,
+        "currency": "ngn",
+        "status": "successful"
+      },
+      "evtName": "wallet_withdrawal",
+      "identity": "692cace1-726c-4f5a-8e16-430d8956d27b",
+      "ts": 1693906089,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "funding_source": "virtual_account",
+        "amount": 22.14,
+        "currency": "ngn",
+        "platform": "mobile",
+        "platform_os": "android",
+        "appsflyer_device_id": "1677579962932-6078014363856473950"
+      },
+      "evtName": "fund_wallet",
+      "identity": "64ead9da-b6b1-4bc1-add8-384e9a47a23e",
+      "ts": 1693906094,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "amount": 1.09,
+        "currency": "ngn",
+        "status": "successful"
+      },
+      "evtName": "wallet_withdrawal",
+      "identity": "692cace1-726c-4f5a-8e16-430d8956d27b",
+      "ts": 1693906095,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "amount": 1.09,
+        "currency": "ngn",
+        "status": "successful"
+      },
+      "evtName": "wallet_withdrawal",
+      "identity": "692cace1-726c-4f5a-8e16-430d8956d27b",
+      "ts": 1693906100,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "plan_id": 348032,
+        "plan_type": "normal",
+        "plan_name": "For.........car",
+        "duration": 0,
+        "autoinvest_activated": false,
+        "reinvest_active": false,
+        "cycle": 1
+      },
+      "evtName": "complete_create_plan",
+      "identity": "30f15469-944c-455c-94d1-a821bc8e2aab",
+      "ts": 1693906132,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "plan_id": 348033,
+        "plan_type": "build-wealth",
+        "plan_name": "Build Wealth",
+        "duration": 300,
+        "autoinvest_activated": true,
+        "reinvest_active": false,
+        "cycle": 1
+      },
+      "evtName": "complete_create_plan",
+      "identity": "7986d22f-8358-4666-81e4-8485c4caf8d2",
+      "ts": 1693906136,
+      "type": "event"
+    },
+    {
+      "evtData": {
+        "funding_source": "virtual_account",
+        "amount": 33.22,
+        "currency": "ngn",
+        "platform": "mobile",
+        "platform_os": "android",
+        "appsflyer_device_id": "1693835745166-8599010087408616929"
+      },
+      "evtName": "fund_wallet",
+      "identity": "88d7aeab-09da-4832-a170-a50b5b808d44",
+      "ts": 1693906180,
+      "type": "event"
+    }
+  ]
+}

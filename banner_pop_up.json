@@ -1,0 +1,15 @@
+{
+  "msgContent": {
+     "html": "<h1>Banner pop-up</h1>",
+     "type": 1,
+     "templateType": "banner",  //templateType can also be box/interstitial
+     "title": "Title goes here",
+     "description": "Description goes here",
+     "kv": {
+         "key1": "value1",
+         "key2": "value2"
+      }
+   },
+   "msgId": "campaignId_date" //1630318544_20211004
+
+}
